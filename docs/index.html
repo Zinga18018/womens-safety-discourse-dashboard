@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StanceLens | Women's Safety Discourse Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Research portfolio project</p>
+        <h1>StanceLens</h1>
+        <p class="subtitle">
+          Interactive aggregate dashboard for public discourse around women's
+          safety narratives in India.
+        </p>
+      </div>
+      <div class="source-pill">Aggregate-only public view</div>
+    </header>
+
+    <main>
+      <section class="metric-grid" aria-label="Dataset summary metrics">
+        <article class="metric-card">
+          <span class="metric-label">Public discourse records</span>
+          <strong id="metric-rows">...</strong>
+          <small>Reddit and YouTube rows</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Women-safety cases</span>
+          <strong id="metric-cases">...</strong>
+          <small id="metric-case-years">2012-2024</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Canonical case rows</span>
+          <strong id="metric-canonical">...</strong>
+          <small>Case-linked discourse only</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Quality checks</span>
+          <strong id="metric-quality">...</strong>
+          <small>Duplicate hash extras / invalid labels</small>
+        </article>
+      </section>
+
+      <section class="controls-band">
+        <label for="case-select">Case focus</label>
+        <select id="case-select"></select>
+        <p id="case-note" class="case-note">Loading case details...</p>
+      </section>
+
+      <section class="layout-two">
+        <article class="panel wide">
+          <div class="panel-head">
+            <div>
+              <h2>Case Volume</h2>
+              <p>Rows linked to each canonical case.</p>
+            </div>
+          </div>
+          <div id="case-volume-chart" class="chart tall"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Platform Split</h2>
+              <p>Selected case only.</p>
+            </div>
+          </div>
+          <div id="platform-chart" class="chart"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Stance Mix By Case</h2>
+            <p>
+              Percent of records assigned to each stance label. The general
+              discourse baseline is used for comparison.
+            </p>
+          </div>
+        </div>
+        <div id="stance-mix-chart" class="chart tall"></div>
+      </section>
+
+      <section class="layout-two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Temporal Phase</h2>
+              <p>Selected case only.</p>
+            </div>
+          </div>
+          <div id="phase-chart" class="chart"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Stance Gap</h2>
+              <p>How far a case's stance mix moves from background discourse.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Case</th>
+                  <th>Rows</th>
+                  <th>Gap</th>
+                  <th>Dominant stance</th>
+                </tr>
+              </thead>
+              <tbody id="gap-table"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Monthly Volume</h2>
+            <p>Selected case timeline from normalized public dates.</p>
+          </div>
+        </div>
+        <div id="timeline-chart" class="chart"></div>
+      </section>
+
+      <section class="evidence">
+        <h2>Evidence Boundary</h2>
+        <p>
+          This dashboard ships aggregate data only. The build script computes
+          the public summary from the local public NDJSON export and audit JSON.
+          It does not publish raw post text.
+        </p>
+        <dl>
+          <div>
+            <dt>Verified rows</dt>
+            <dd id="evidence-rows">...</dd>
+          </div>
+          <div>
+            <dt>Generated from</dt>
+            <dd id="evidence-generated">...</dd>
+          </div>
+          <div>
+            <dt>Custom dashboard metric</dt>
+            <dd>
+              Stance gap = half-L1 distance between a case stance mix and the
+              general-discourse baseline, measured in percentage points.
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
