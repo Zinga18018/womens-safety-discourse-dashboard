@@ -1,5 +1,7 @@
 # StanceLens: Women's Safety Discourse Dashboard
 
+[See the workflow flowchart and code walkthrough](WORKFLOW.md)
+
 StanceLens is an interactive dashboard built from my women-safety public
 discourse research dataset. It summarizes stance, platform, case volume, and
 temporal patterns across Reddit and YouTube records tied to 16 women-safety
