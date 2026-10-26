@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Share the research through aggregates</title><desc id="desc">A static dashboard that keeps raw public-discourse posts outside the demo. Read authorized local research exports: The summary builder reads the corpus and audit/statistics inputs The public checkout does not include the upstream raw corpus. Then Aggregate coverage and distributions: Summarize platform, stance, phase, dates and canonical cases Calculate the declared stance-distribution gap. Then Write the public summary: Export aggregate-only JSON for the static dashboard Do not copy post text into the public output. Then Inspect the saved dashboard: Load summary JSON; filter and compare interactive charts Readers can run the included demo without private inputs.. Discourse distributions are descriptive; the dashboard does not reproduce training or establish population effects.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#137f73" stroke-width="1.6"/></marker></defs>
+<rect width="1200" height="800" rx="24" fill="#f6f8fc"/>
+<text x="48" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#137f73">YOGESH KUCHIMANCHI / PROJECT WALKTHROUGH</text>
+<text x="48" y="99" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#15243a">Share the research through aggregates</text>
+<text x="48" y="132" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#465972">A static dashboard that keeps raw public-discourse posts outside the demo</text>
+<rect x="48" y="166" width="733" height="110" rx="14" fill="#ffffff" stroke="#d5deeb" stroke-width="1.5"/><circle cx="88" cy="202" r="19" fill="#137f73"/><text x="88" y="209" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#fff" font-weight="700">1</text><text x="124" y="203" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#15243a">Read authorized local research exports</text>
+<text x="124" y="232" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">The summary builder reads the corpus and audit/statistics inputs</text>
+<text x="124" y="256" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">The public checkout does not include the upstream raw corpus.</text>
+<text x="826" y="192" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#137f73" letter-spacing="1">INPUT BOUNDARY</text>
+<text x="826" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Rebuilds need authorized</text>
+<text x="826" y="244" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">local research inputs.</text>
+<path d="M414 276 V295" stroke="#137f73" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+<rect x="48" y="303" width="733" height="110" rx="14" fill="#ffffff" stroke="#d5deeb" stroke-width="1.5"/><circle cx="88" cy="339" r="19" fill="#137f73"/><text x="88" y="346" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#fff" font-weight="700">2</text><text x="124" y="340" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#15243a">Aggregate coverage and distributions</text>
+<text x="124" y="369" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Summarize platform, stance, phase, dates and canonical cases</text>
+<text x="124" y="393" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Calculate the declared stance-distribution gap.</text>
+<text x="826" y="329" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#137f73" letter-spacing="1">DENOMINATORS</text>
+<text x="826" y="357" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Corpus coverage and</text>
+<text x="826" y="381" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">case-linked rows differ.</text>
+<path d="M414 413 V432" stroke="#137f73" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+<rect x="48" y="440" width="733" height="110" rx="14" fill="#ffffff" stroke="#d5deeb" stroke-width="1.5"/><circle cx="88" cy="476" r="19" fill="#137f73"/><text x="88" y="483" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#fff" font-weight="700">3</text><text x="124" y="477" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#15243a">Write the public summary</text>
+<text x="124" y="506" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Export aggregate-only JSON for the static dashboard</text>
+<text x="124" y="530" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Do not copy post text into the public output.</text>
+<text x="826" y="466" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#137f73" letter-spacing="1">PUBLIC ARTIFACT</text>
+<text x="826" y="494" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">docs/data/</text>
+<text x="826" y="518" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">public_summary.json</text>
+<path d="M414 550 V569" stroke="#137f73" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+<rect x="48" y="577" width="733" height="110" rx="14" fill="#ffffff" stroke="#d5deeb" stroke-width="1.5"/><circle cx="88" cy="613" r="19" fill="#137f73"/><text x="88" y="620" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#fff" font-weight="700">4</text><text x="124" y="614" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#15243a">Inspect the saved dashboard</text>
+<text x="124" y="643" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Load summary JSON; filter and compare interactive charts</text>
+<text x="124" y="667" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Readers can run the included demo without private inputs.</text>
+<text x="826" y="603" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#137f73" letter-spacing="1">INTERPRETATION</text>
+<text x="826" y="631" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">Model labels are not all</text>
+<text x="826" y="655" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#465972">human-reviewed labels.</text>
+<rect x="48" y="722" width="1104" height="48" rx="10" fill="#e8edf6"/><text x="68" y="752" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#243a55">Discourse distributions are descriptive; the dashboard does not reproduce training or establish population effects.</text></svg>

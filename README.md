@@ -21,12 +21,20 @@ post text in the demo.
 
 ## Why this project matters
 
-Most portfolio dashboards use clean toy data. This one is tied to a real
-research pipeline, a real public-discourse question, and a dataset large enough
-to force real data-cleaning decisions.
+The dashboard lets a reader compare case coverage, platform mix, and stance
+patterns without loading the full research corpus. Keeping these views together
+makes differences in coverage and denominators easier to inspect.
 
 The public dashboard is aggregate-only. It does not ship raw post text. That
 keeps the demo safer while still showing the analysis layer.
+
+## From research export to public dashboard
+
+![Local research inputs become aggregate-only JSON and a static interactive dashboard; raw posts stay outside the public output](docs/aggregate-workflow.svg)
+
+[Workflow and code map](WORKFLOW.md). The public checkout includes the saved summary
+and can run without the private upstream corpus. Rebuilding that summary requires
+authorized local research inputs; the demo does not reproduce upstream training.
 
 ## Custom metric
 
