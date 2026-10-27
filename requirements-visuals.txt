@@ -1,0 +1,2 @@
+# Optional static plot reproduction; no private corpus access.
+matplotlib==3.10.8

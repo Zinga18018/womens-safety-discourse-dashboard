@@ -19,22 +19,23 @@ post text in the demo.
 - Platform split, temporal phase counts, monthly case volume, and a case-level
   stance gap score.
 
-## Why this project matters
+## Case coverage
 
-The dashboard lets a reader compare case coverage, platform mix, and stance
-patterns without loading the full research corpus. Keeping these views together
-makes differences in coverage and denominators easier to inspect.
+![Reddit and YouTube row counts for the sixteen canonical cases, drawn from the existing public aggregate.](docs/images/case-platform-counts.svg)
 
-The public dashboard is aggregate-only. It does not ship raw post text. That
-keeps the demo safer while still showing the analysis layer.
+These counts describe the collected corpus, not incident frequency or
+representative public opinion. The plot uses the existing
+[public summary](docs/data/public_summary.json), without raw posts or user records.
+The [interactive view](docs/index.html) retains case and timeline controls.
 
-## From research export to public dashboard
+```sh
+python -m pip install -r requirements-visuals.txt
+python scripts/plot_public_summary.py
+python scripts/plot_public_summary.py --check
+```
 
-![Local research inputs become aggregate-only JSON and a static interactive dashboard; raw posts stay outside the public output](docs/aggregate-workflow.svg)
-
-[Workflow and code map](WORKFLOW.md). The public checkout includes the saved summary
-and can run without the private upstream corpus. Rebuilding that summary requires
-authorized local research inputs; the demo does not reproduce upstream training.
+[Workflow and code map](WORKFLOW.md). Rebuilding the public summary is separate
+and requires authorized local research inputs; plotting it does not.
 
 ## Custom metric
 
@@ -80,6 +81,7 @@ python scripts/build_public_summary.py `
 
 ```powershell
 python -m unittest discover -s tests
+node tests/test_dashboard.mjs
 ```
 
 ## Evidence and limitations
