@@ -33,7 +33,7 @@ function baseLayout(extra = {}) {
     margin: { l: 58, r: 24, t: 18, b: 56 },
     font: {
       family:
-        "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "Arial, Helvetica, sans-serif",
       color: "#111827",
     },
     xaxis: {
@@ -178,17 +178,17 @@ function renderSelectedCase(caseName) {
     "platform-chart",
     [
       {
-        type: "pie",
-        labels: platforms.map((platform) => caseLabel(platform)),
-        values: platforms.map((platform) => item.platform_counts[platform]),
-        hole: 0.55,
-        marker: { colors: platforms.map((platform) => COLORS[platform]) },
-        textinfo: "label+percent",
-        hovertemplate: "%{label}<br>%{value:,} rows<extra></extra>",
+        type: "bar",
+        x: platforms.map((platform) => caseLabel(platform)),
+        y: platforms.map((platform) => item.platform_counts[platform]),
+        marker: { color: "#4d6f8b" },
+        hovertemplate: "%{x}<br>%{y:,} rows<extra></extra>",
       },
     ],
     baseLayout({
-      margin: { l: 20, r: 20, t: 8, b: 20 },
+      margin: { l: 58, r: 20, t: 8, b: 50 },
+      xaxis: { title: "Platform" },
+      yaxis: { title: "Rows", gridcolor: "#e5e5e5", rangemode: "tozero" },
       showlegend: false,
     }),
     { displayModeBar: false, responsive: true },

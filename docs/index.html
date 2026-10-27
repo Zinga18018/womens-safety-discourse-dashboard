@@ -9,40 +9,21 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
-        <p class="eyebrow">Research portfolio project</p>
-        <h1>StanceLens</h1>
-        <p class="subtitle">
-          Interactive aggregate dashboard for public discourse around women's
-          safety narratives in India.
-        </p>
-      </div>
-      <div class="source-pill">Aggregate-only public view</div>
+      <h1>Women's safety discourse</h1>
+      <p>Case, platform and stance counts from the public aggregate export. No raw posts are published here.</p>
     </header>
 
     <main>
-      <section class="metric-grid" aria-label="Dataset summary metrics">
-        <article class="metric-card">
-          <span class="metric-label">Public discourse records</span>
-          <strong id="metric-rows">...</strong>
-          <small>Reddit and YouTube rows</small>
-        </article>
-        <article class="metric-card">
-          <span class="metric-label">Women-safety cases</span>
-          <strong id="metric-cases">...</strong>
-          <small id="metric-case-years">2012-2024</small>
-        </article>
-        <article class="metric-card">
-          <span class="metric-label">Canonical case rows</span>
-          <strong id="metric-canonical">...</strong>
-          <small>Case-linked discourse only</small>
-        </article>
-        <article class="metric-card">
-          <span class="metric-label">Quality checks</span>
-          <strong id="metric-quality">...</strong>
-          <small>Duplicate hash extras / invalid labels</small>
-        </article>
-      </section>
+      <p class="dataset-summary">
+        <span id="metric-rows">...</span> public rows;
+        <span id="metric-canonical">...</span> rows linked to
+        <span id="metric-cases">...</span> canonical cases.
+        <span id="metric-case-years">...</span>.
+        Counts describe this corpus, not representative public opinion or incident frequency.
+      </p>
+      <details class="data-checks"><summary>Aggregate data checks</summary>
+        <p>Duplicate text-hash extras / invalid labels: <span id="metric-quality">...</span>.</p>
+      </details>
 
       <section class="controls-band">
         <label for="case-select">Case focus</label>
@@ -130,7 +111,7 @@
       </section>
 
       <section class="evidence">
-        <h2>Evidence Boundary</h2>
+        <h2>Data and limitations</h2>
         <p>
           This dashboard ships aggregate data only. The build script computes
           the public summary from the local public NDJSON export and audit JSON.
@@ -146,7 +127,7 @@
             <dd id="evidence-generated">...</dd>
           </div>
           <div>
-            <dt>Custom dashboard metric</dt>
+            <dt>Stance gap</dt>
             <dd>
               Stance gap = half-L1 distance between a case stance mix and the
               general-discourse baseline, measured in percentage points.
